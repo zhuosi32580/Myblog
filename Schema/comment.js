@@ -30,7 +30,7 @@ const CommentSchema = new Schema({
     //对应文章的评论数减一
     Article.updateOne({_id: article},{$inc:{commentNum: -1}}).exec()
     //当前被删除评论的文章的commentNum -1
-    User.updateOne({_id: userId},{$inc:{commentNum: -1}}).error()
+    User.updateOne({_id: userId},{$inc:{commentNum: -1}}).exec()
   })
 
 
