@@ -139,7 +139,7 @@ exports.del = async ctx =>{
   }
   
   await Article.findById(_id)
-    .then(data =>{data.remove()})
+    .then(data =>data.remove())
     .catch(err =>{
       res ={
         state:0,
